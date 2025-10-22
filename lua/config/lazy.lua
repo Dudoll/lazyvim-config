@@ -1,3 +1,13 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
+vim.o.mouse = ""
+joel:~/.config/nvim$ cat lua/config/
+autocmds.lua  keymaps.lua   lazy.lua      options.lua
+joel:~/.config/nvim$ cat lua/config/lazy.lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"

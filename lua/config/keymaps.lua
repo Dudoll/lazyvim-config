@@ -7,7 +7,7 @@ map("i", "<C-f>", "<Right>", { desc = "right" })
 map("i", "<C-b>", "<Left>", { desc = "left" })
 map("i", "<C-a>", "<Home>", { desc = "home" })
 map("i", "<C-e>", "<C-o>$", { desc = "end" })
-map("i", "<C-d>", "<Del>", { desc = "end" })
+map("i", "<C-d>", "<Del>", { desc = "delete" })
 map("i", "<leader>n", "!=", { desc = "!=" })
 map("i", "<leader>r", "->", { desc = "->" })
 

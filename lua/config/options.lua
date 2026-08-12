@@ -3,8 +3,9 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
--- Keep UI motion quiet during long code-reading sessions.
-vim.g.snacks_animate = false
+-- Snacks.scroll powers smooth <C-u>/<C-d> movement. Keep animations enabled;
+-- LazyVim can still toggle them at runtime with <leader>ua.
+vim.g.snacks_animate = true
 
 local opt = vim.opt
 

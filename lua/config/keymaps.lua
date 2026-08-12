@@ -1,6 +1,5 @@
 -- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Default keymaps: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 local map = vim.keymap.set
 
 map("i", "<C-f>", "<Right>", { desc = "right" })
@@ -19,3 +18,7 @@ map("n", "<A-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "<A-m>", function()
   Snacks.explorer({ cwd = LazyVim.root() })
 end, { desc = "file explorer" })
+
+-- <leader>uw is LazyVim's wrap toggle; uppercase W remains free in the pinned
+-- LazyVim version and keeps all existing mappings intact.
+Snacks.toggle.option("list", { name = "Whitespace" }):map("<leader>uW")

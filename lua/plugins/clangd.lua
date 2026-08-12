@@ -12,6 +12,11 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      -- Keep long reading sessions quiet. LazyVim's existing <leader>uh mapping
+      -- still enables inlay hints on demand.
+      inlay_hints = {
+        enabled = false,
+      },
       ---@type lspconfig.options
       servers = {
         -- clangd will be automatically installed with mason and loaded with lspconfig

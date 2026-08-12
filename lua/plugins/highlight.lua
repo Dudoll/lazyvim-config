@@ -26,7 +26,7 @@ local function run_highlighter(command)
 end
 
 local function keyword_pattern(word)
-  return [[\V\<]] .. vim.fn.escape(word, [[\]]) .. [[\>]]
+  return [[\C\V\<]] .. vim.fn.escape(word, [[\]]) .. [[\>]]
 end
 
 local function add_keyword(word)
@@ -61,7 +61,7 @@ return {
       {
         "<leader>hh",
         function()
-          run_highlighter("+")
+          add_keyword(vim.fn.expand("<cword>"))
         end,
         desc = "Toggle Keyword Background",
       },

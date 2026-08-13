@@ -29,3 +29,8 @@ opt.listchars = {
 -- Indentation is intentionally not overridden globally. Python and Linux kernel C
 -- get project-aware settings from config/autocmds.lua; other projects keep their
 -- LazyVim, EditorConfig, or project-local settings.
+opt.tabstop = 8
+opt.shiftwidth = 8
+opt.softtabstop = 8
+opt.expandtab = false
+vim.g.autoformat = false
